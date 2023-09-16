@@ -61,3 +61,27 @@ h1{
     left: -30px;
     transform: rotateY(180deg)
 }
+
+.faq.title{
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0 35px 0 0;
+}
+
+.faq-text{
+    display: none;
+}
+
+.faq.active .faq-text{
+    display: block;
+}
+
+button{
+    position: absolute;
+    right: 10px;
+    bottom: 50px;
+}
+
+.faq.active .faq-text button .fa-chevron-down{
+    display: none;
+}
