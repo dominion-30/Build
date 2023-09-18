@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+*{box-sizing: border-box;
+}
+
+
+body{
+    background-color: #eafbff;
+    display: flex;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+/* when button is not active */
+
+.panel{
+    position: relative;
+    border: 0;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 25px 0;
+    width: 50px;
+    height: auto;
+    text-align: center;
+    transition: transform 0.3s ease;
+    
+}
+
+.panel a{
+    text-decoration: none;
+    color: #000;
+    display: none;
+}
+
+
+
+
+
+
+.btn{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 50px;
+    border: 0;
+    font-size: 20px;
+    background-color: transparent;
+}
+
+.btn .fa-times{
+    display: none;
+}
+
+
+/* when button is active */
+
+.panel.active{
+    
+    border: 0;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 25px 0;
+    max-width: 100%;
+    width: 300px;
+    transform: translateX(150px);
+    
+    
+}
+
+.panel.active a{
+    text-decoration: none;
+    color: #000;
+    display: inline;
+    transform: rotate(10deg);
+
+}
+
+.panel.active .btn .fa-bars{
+    display: none;
+}
+
+
+.panel.active .btn .fa-times{
+    display: inline;
+}
+
+.btn .fa-times{
+    position: absolute;
+    
+    top: 20px;
+    left: 265px;
+    background-color: #e1e1e1;
+    border-radius: 50%;
+    padding: 5px
+}
+
+.btn .fa-times:focus{
+    outline: 0;
+}
+
+.btn .fa-times:active{
+    opacity: 0.5;
+    transform: scale(0.98);
+}
+
